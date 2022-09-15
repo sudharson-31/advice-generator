@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$font: 'Manrope', sans-serif;
+$L-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$g-blue: hsl(217, 19%, 38%);
+$dg-blue: hsl(217, 19%, 24%);
+$d-blue: hsl(218, 23%, 16%);
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-color: $d-blue;
+    font-family: $font;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    text-rendering:optimizeLegibility;
+}
+.advice-box{
+    width: 500px;
+    background-color: $dg-blue;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.advice-number{
+    letter-spacing: 2px;
+    font-size: 0.8em;
+    color: $neon-green;
+    margin-bottom: 5%;
+}
+.advice{
+    display: inline-block;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 0 5%;
+    color: $L-cyan;
+    letter-spacing: 1px;
+    margin-bottom: 8%;
+}
+.advice-divider{
+    padding-bottom: 5%;
+}
+#adg-button{
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $neon-green;
+    cursor: pointer;
+    transform: translateX(-25px);
+    transition: all 350ms ease-in-out;
+    &:hover{
+        box-shadow: 0px 0px 50px $neon-green;
+    }
+}
+@media only screen and (min-width: 1441px) {
+    #adg-button{
+        transform: translate(-25px,10px);
+        padding: 1%;
+    }
+}
+@media only screen and (max-width: 1440px) and (min-width: 1000px){
+    #adg-button{
+        transform: translateX(-20px);
+        padding: 1.5%;
+    }
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px){
+    #adg-button{
+        transform: translateX(-25px);
+        padding: 2%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .advice-box{
+        width: 350px;
+    }
+    .advice-number{
+        margin: 5% 0;
+    }
+    .advice{
+        margin: 5% 3%;
+        padding-bottom: 5%;
+    }
+    .advice-divider{
+        padding-bottom: 12% ;
+    }
+    #adg-button{
+        transform: translate(-20px,-14px);
+        padding: 3%;
+    }
+}
